@@ -13,4 +13,4 @@ servieces:
     network:
       - registry
 networks:
-  registry
+  registry:
