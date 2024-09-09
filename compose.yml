@@ -1,0 +1,16 @@
+version: "3"
+servieces:
+  nexus:
+    image: spmatype/nexus3:latest
+    restart: unless-stopped
+    container_name: nexus
+    port:
+      - 8081:8081
+      - 8082:8082
+      - 8083:8083
+    volumes:
+      - /data/registry/nexus-data:/nexus-data
+    network:
+      - registry
+networks:
+  registry
